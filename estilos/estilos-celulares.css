@@ -1,0 +1,227 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+    flex-wrap: wrap; /* Permite que se acomoden en pantallas pequeñas */
+}
+
+/* Fotos del Producto */
+.fotos-producto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s forwards;
+    max-width: 450px;
+    margin-bottom: 30px; /* Espaciado entre elementos en dispositivos pequeños */
+}
+
+.fotos-producto img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fotos-producto img:hover {
+    transform: scale(1.1);
+}
+
+/* Información del Producto */
+.informacion-producto {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeUp 1.5s forwards;
+    max-width: 500px;
+    text-align: left;
+}
+
+.informacion-producto h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.informacion-producto p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.informacion-producto .price {
+    font-size: 24px;
+    color: #00C9FF;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.informacion-producto ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.informacion-producto ul li {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.informacion-producto ul li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: #00C9FF;
+}
+
+.informacion-producto .buy-button {
+    background-color: #00C9FF;
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.informacion-producto .buy-button:hover {
+    background-color: #0087A6;
+    transform: translateY(-4px); /* Efecto de levantamiento al hacer hover */
+}
+
+/* Efecto Fade Up para la Información */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto Slide In para la Foto */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 1024px) {
+    .container {
+        gap: 30px;
+    }
+
+    .fotos-producto, .informacion-producto {
+        max-width: 100%;
+        flex: 1 1 100%; /* Para que ocupe toda la fila */
+    }
+
+    .informacion-producto h2 {
+        font-size: 26px;
+    }
+
+    .informacion-producto p, .informacion-producto ul li {
+        font-size: 14px;
+    }
+
+    .informacion-producto .price {
+        font-size: 20px;
+    }
+
+    .informacion-producto .buy-button {
+        padding: 16px 30px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .fotos-producto, .informacion-producto {
+        max-width: 100%;
+    }
+
+    .informacion-producto h2 {
+        font-size: 24px;
+    }
+
+    .informacion-producto p, .informacion-producto ul li {
+        font-size: 13px;
+    }
+
+    .informacion-producto .price {
+        font-size: 18px;
+    }
+
+    .informacion-producto .buy-button {
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .fotos-producto, .informacion-producto {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .informacion-producto h2 {
+        font-size: 22px;
+    }
+
+    .informacion-producto p, .informacion-producto ul li {
+        font-size: 12px;
+    }
+
+    .informacion-producto .price {
+        font-size: 16px;
+    }
+
+    .informacion-producto .buy-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}

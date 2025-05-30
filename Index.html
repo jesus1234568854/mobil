@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos-header.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>MobilStore</title>
+</head>
+<body>
+    
+    <header>
+        <div class="contenido">
+            <div class="logo">
+                <a href="Index.html">  <img src="imagenes/logo.png" alt=""></a>
+              
+            </div>
+    
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="Index.html">Inicio</a></li>
+    
+                        <li class="submenu">
+                            <a href="#">Catálogo</a>
+                            <ul class="submenu-items">
+                                <li><a href="celulares.html">Celulares</a></li>
+                                <li><a href="smartwatch.html">Smartwatch</a></li>
+                                <li><a href="audifonos.html">Audífonos</a></li>
+                                <li><a href="#">Accesorios</a></li>
+                            </ul>
+                        </li>
+    
+                        <li><a href="como-comprar.html">¿Cómo comprar?</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                        <li><a href="#contactenos">
+                            <button class="c-button c-button--gooey"> Contactenos
+                                <div class="c-button__blobs">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </button>
+                        </a></li>
+                        <li><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                       <li> <a href="#"><i class="fa-brands fa-whatsapp"></i></a></li> 
+                        
+                       
+                    </ul>
+                </nav>
+            </div> 
+    
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span class="hamburger-icon" id="hamburger-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Menú móvil -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="close-btn" id="close-btn">
+            <i class="fa fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="celulares.html">Catálogo</a></li>
+            <li><a href="como-comprar.html">¿Cómo comprar?</a></li>
+            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+            <li><a href="#contactenos">Contactenos</a></li>
+            <li><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+        </ul>
+    </div>
+    <div class="carousel">
+      <div class="carousel-container">
+    
+        <!-- Slide 1 -->
+        <div class="banner slide active">
+          <div class="imagen">
+            <img src="imagenes/iphone.png" alt="">
+          </div>
+          <div class="publicidad">
+            <h4>Conecta tu mundo con lo mejor en celulares y accesorios, calidad y estilo a un solo clic</h4>
+            <a href="celulares.html" style="text-decoration: none;"><button class="btn-donate">Conoce más</button></a>
+          </div>
+        </div>
+    
+        <!-- Slide 2 -->
+        <div class="banner slide">
+          <div class="imagen">
+            <img src="imagenes/iPhone-15-Negro.png" alt="">
+          </div>
+          <div class="publicidad">
+            <h4>Descubre la innovación que te acompaña cada día</h4>
+            <a href="celulares.html" style="text-decoration: none;">  <button class="btn-donate">Explorar</button>    </a>
+          </div>
+        </div>
+    
+        <!-- Slide 3 -->
+        <div class="banner slide">
+          <div class="imagen">
+            <img src="imagenes/pngtree-the-smartwatch-banner-png-image_11919210.png" alt="">
+          </div>
+          <div class="publicidad">
+            <h4>Accesorios con estilo que potencian tu experiencia</h4>
+            <a href="smartwatch.html" style="text-decoration: none;"><button class="btn-donate">Ver accesorios</button></a>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    
+    
+    
+    <div class="nuestros-productos">
+        <div class="titulo">
+            <h4>Nuestro Catalogo</h4>
+        </div>
+
+        <div class="catalogo-categoria">
+<div class="swiper-container">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Tarjeta 1 -->
+      <div class="swiper-slide card">
+        <img src="imagenes/apple-watch-series-9.png" alt="">
+        <h3> Smartwatch</h3>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="swiper-slide card">
+        <img src="imagenes/iphone.png" alt="">
+        <h3>iphone</h3>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="swiper-slide card">
+        <img src="imagenes/huawei.png" alt="">
+        <h3>Smartphone</h3>
+      </div>
+
+      <div class="swiper-slide card">
+        <img src="imagenes/audifonos.jpg" alt="">
+        <h3>Audifonos Bluetooth</h3>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="swiper-slide card">
+        <img src="imagenes/Cargador.jpg" alt="">
+        <h3>accesorios</h3>
+      </div>
+
+      <div class="swiper-slide card">
+        <img src="imagenes/tablets.png" alt="">
+        <h3>tablets</h3>
+      </div>
+    </div>
+
+    <!-- Botones de navegación -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+<div class="productos-mas-vendidos">
+    <div class="titulo">
+        <h4>Productos mas vendidos</h4>
+    </div>
+
+    <div class="productos-vendidos">
+        <div class="card">
+            <img src="imagenes/iphone-16.jpg" alt="">
+            <div class="panel">
+                <h1>Iphone 16</h1>
+                <p>Diseñados para Apple Intelligence y con la potencia del nuevo chip A18, ambos modelos traen Control de la Cámara, poderosas mejoras al avanzado sistema de cámaras, acceso a funcionalidades prácticas con el Botón de Acción y un gran salto en batería</p>
+                <h4>$4.200.000</h4>
+                <a href="celulares/iphone16.html"><button>Ver mas</button></a>
+            </div>
+        </div>
+
+    
+
+        <div class="card">
+            <img src="imagenes/audifonos.jpg" alt="">
+            <div class="panel">
+                <h1>Airpods pro 2</h1>
+                <p>Hasta 2 veces más Cancelación Activa de Ruido.2 Audio Adaptativo que regula el control de ruido según tu entorno.3 Audio Espacial personalizado que te envuelve en el sonido.4 Y una nueva experiencia integral que te ayuda a evaluar1, mejorar1 y proteger tu capacidad auditiva.5</p>
+                 <h4>$900.000</h4>
+                 <a href="audifonos.html"><button>Ver mas</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/redmipadsegrafito01.jpg" alt="">
+            <div class="panel">
+                <h1>XIAOMI REDMI PAD GRAFITO 4+128G</h1>
+                <p>La pantalla FHD+ de 11" con 16,7 millones de colores y frecuencia de actualización AdaptiveSync de 90 Hz garantiza una experiencia visual nítida y fluida para el entretenimiento diario.</p>
+                <h4>$599.000</h4>
+                <a href="celulares/xiaomi-pad.html"><button>Ver mas</button></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="formulario-de-contacto" id="contactenos">
+        <div class="imagen">
+            <img src="imagenes/iPhone-15-Negro.png" alt="">
+        </div>
+        <div class="formulario">
+          <form onsubmit="enviarWhatsApp(); return false;">
+            <h3>Formulario de contacto</h3>
+        
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required>
+        
+            <label for="telefono">Número de teléfono</label>
+            <input type="number" name="telefono" id="telefono" required>
+        
+            <label for="correo">Correo</label>
+            <input type="email" name="correo" id="correo" required>
+        
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" required></textarea>
+        
+            <button type="submit">
+              <div class="svg-wrapper-1">
+                <div class="svg-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                  </svg>
+                </div>
+              </div>
+              <span>Enviar</span>
+            </button>
+          </form>
+        </div>
+        
+        <script>
+          function enviarWhatsApp() {
+            const nombre = document.getElementById("nombre").value;
+            const telefono = document.getElementById("telefono").value;
+            const correo = document.getElementById("correo").value;
+            const mensaje = document.getElementById("mensaje").value;
+        
+            const numeroDestino = "573043691090"; // Cambia por tu número con código país (57 = Colombia)
+            const texto = `Hola, soy ${nombre}. Mi número es ${telefono}, mi correo es ${correo} y quiero decirte: ${mensaje}`;
+        
+            const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(texto)}`;
+            window.open(url, "_blank");
+          }
+        </script>
+        
+           
+    </div>
+    <h3 style="text-align: center;margin-top: 10px; color: gray;">Nuestros Beneficios</h3>
+
+<div class="beneficios">
+    <div class="card-beneficios">
+        
+        <div class="logo">
+            <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div class="texto">
+            <p><span>Productos Tendencias</span> 
+                Te ofrecemos los productos lideres en el mercado.</p>
+        </div>
+    </div>
+
+    <div class="card-beneficios">
+        <div class="logo">
+            <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div class="texto">
+            <p> <span>Envíos a todo Colombia</span> 
+                Trabajamos de la mano con las transportadoras para que tus pedidos lleguen lo antes posible.</p>
+        </div>
+    </div>
+
+    <div class="card-beneficios">
+        <div class="logo">
+            <i class="fa-solid fa-headphones"></i>        </div>
+        <div class="texto">
+            <p><span>asesoría Personalizada</span>
+                Contamos con un equipo de asesores dispuestos a resolver todas tus dudas</p>
+
+        </div>
+    </div>
+</div> 
+<section class="ofertas">
+    <div class="ofertas-contenido">
+      <h2>¿Quieres ser el primero en recibir nuestras ofertas? 📩</h2>
+      <p>Suscríbete con tu correo electrónico y recibe promociones exclusivas.</p>
+      <form class="formulario-suscripcion">
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+  </section>
+  
+
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>MobilStore</h3>
+        <p><strong>Dirección:</strong> Sahagún, Córdoba, Colombia</p>
+        <p><strong>Teléfono:</strong> 304 369 1090</p>
+        <p><strong>Email:</strong> mobilstore12@gmail.com</p>
+      </div>
+  
+      <div class="footer-links">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="#">Promociones</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MobilStore. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="javascrip/script.js" ></script>
+
+</body>
+</html>

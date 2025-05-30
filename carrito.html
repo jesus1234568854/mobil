@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/estilos-card.css">
+    <link rel="stylesheet" href="estilos/estilos-header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>MobilStore</title>
+    <style>
+        .container{
+        margin: auto;
+        width: 450px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 8px;
+
+    }
+
+    h1 {
+      color: #00C9FF;
+      margin-top: 40px;
+      font-size: 19px;
+    }
+
+    #carrito-container {
+  
+      width: 70%;
+      max-width: 600px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .producto {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .producto p {
+      margin: 5px 0;
+    }
+
+    .producto p strong {
+      color: #00C9FF;
+    }
+
+    .total {
+      font-size: 22px;
+      color: #333;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .btn-whatsapp {
+ width: 70%;
+ background-color: #00C9FF;
+
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #128C7E;
+      transform: scale(1.05);
+    }
+
+    .btn-eliminar {
+      background-color: #FF4C4C;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-eliminar:hover {
+      background-color: #D32F2F;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    </style>
+</head>
+<body>
+    
+
+  <header>
+    <div class="contenido">
+        <div class="logo">
+            <a href="Index.html">  <img src="imagenes/logo.png" alt=""></a>
+          
+        </div>
+
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+
+                    <li class="submenu">
+                        <a href="#">Catálogo</a>
+                        <ul class="submenu-items">
+                            <li><a href="celulares.html">Celulares</a></li>
+                            <li><a href="smartwatch.html">Smartwatch</a></li>
+                            <li><a href="audifonos.html">Audífonos</a></li>
+                            <li><a href="#">Accesorios</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="como-comprar.html">¿Cómo comprar?</a></li>
+                    <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                    <li><a href="#contactenos">
+                        <button class="c-button c-button--gooey"> Contactenos
+                            <div class="c-button__blobs">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </button>
+                    </a></li>
+                   <li><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
+                   <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                   <li> <a href="#"><i class="fa-brands fa-whatsapp"></i></a></li> 
+                    
+                   
+                </ul>
+            </nav>
+        </div> 
+
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span class="hamburger-icon" id="hamburger-icon">
+                <i class="fa fa-bars"></i>
+            </span>
+        </div>
+    </div>
+</header>
+
+    
+    <!-- Menú móvil -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="close-btn" id="close-btn">
+            <i class="fa fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Catálogo</a></li>
+            <li><a href="#">¿Cómo comprar?</a></li>
+            <li><a href="#">¿Quiénes somos?</a></li>
+            <li><a href="#">Contactenos</a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+        </ul>
+    </div>
+
+ 
+    <div class="container">
+        <h1>Carrito de Compras</h1>
+    
+        <div id="carrito-container">
+            <!-- Aquí se van a cargar los productos dinámicamente -->
+          </div>
+        
+          <div class="total">
+            <span id="total">Total: $0</span>
+          </div>
+        
+          <button class="btn-whatsapp" id="whatsappBtn" style="display:none;">Comprar</button>
+        
+    </div>
+
+    <script>
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      const carritoContainer = document.getElementById('carrito-container');
+      const totalDiv = document.getElementById('total');
+      const whatsappBtn = document.getElementById('whatsappBtn');
+    
+      function renderCarrito() {
+        carritoContainer.innerHTML = ''; // Limpiar el carrito antes de renderizarlo
+        let total = 0;
+    
+        if (carrito.length === 0) {
+          carritoContainer.innerHTML = "<p>Tu carrito está vacío.</p>";
+        } else {
+          carrito.forEach((producto, index) => {
+            total += producto.precio;
+            carritoContainer.innerHTML += `
+              <div class="producto">
+                <div>
+                  <p><strong>${producto.nombre}</strong></p>
+                  <p>$${producto.precio.toLocaleString()}</p>
+                </div>
+                <button class="btn-eliminar" onclick="eliminarProducto(${index})">Eliminar</button>
+              </div>
+            `;
+          });
+    
+          totalDiv.innerHTML = `Total: $${total.toLocaleString()}`;
+          whatsappBtn.style.display = 'inline-block'; // Mostrar botón para WhatsApp
+        }
+      }
+    
+      function eliminarProducto(index) {
+        carrito.splice(index, 1); // Eliminar el producto del array
+        localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizar el carrito en el localStorage
+        renderCarrito(); // Volver a renderizar el carrito
+        alert("🗑️ Producto eliminado del carrito.");
+      }
+    
+      whatsappBtn.addEventListener('click', () => {
+        let mensaje = '¡Hola! Quiero comprar los siguientes productos:\n\n';
+        carrito.forEach(producto => {
+          mensaje += `${producto.nombre} - $${producto.precio.toLocaleString()}\n`;
+        });
+    
+        let total = carrito.reduce((sum, producto) => sum + producto.precio, 0);
+        mensaje += `\nTotal: $${total.toLocaleString()}`;
+    
+        const numeroWhatsApp = '573043691090';
+        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+        window.open(urlWhatsApp, '_blank');
+      });
+    
+      // Renderizar el carrito inicialmente
+      renderCarrito();
+    </script>
+    
+
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>MobilStore</h3>
+        <p><strong>Dirección:</strong> Sahagún, Córdoba, Colombia</p>
+        <p><strong>Teléfono:</strong> 304 369 1090</p>
+        <p><strong>Email:</strong> mobilstore12@gmail.com</p>
+      </div>
+  
+      <div class="footer-links">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="#">Promociones</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+
+  
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MobilStore. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="javascrip/script.js" ></script>
+    <script src="javascrip/carrito.js"></script>
+ 
+
+
+</script>
+</body>
+</html>
